@@ -1,0 +1,40 @@
+﻿@model IEnumerable<CopyType>
+<partial name="_Notification" />
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h1 class="text-primary">Copy-Type List</h1>
+        </div>
+
+        <div class="col-6 text-end pt-2">
+            <a asp-controller="CopyType" asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Create New Copy-Type</a>
+        </div>
+
+    </div>
+</div><br />
+
+
+<table class="table table-border table-striped ">
+<thead>
+    <tr>
+        <th>CopyType Name</th>
+        
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>@obj.Name</td>
+               
+                <td>
+                    <div class="w-50 btn-group" role="group">
+                    <a asp-controller="CopyType" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i>Edit</a> | 
+                    <a asp-controller="CopyType" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2"><i class="bi bi-trash"></i>Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

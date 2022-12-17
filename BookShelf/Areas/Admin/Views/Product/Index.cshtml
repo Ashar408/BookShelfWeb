@@ -1,0 +1,37 @@
+﻿
+<partial name="_Notification" />
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h1 class="text-primary">Product List</h1>
+        </div>
+
+        <div class="col-6 text-end pt-2">
+            <a asp-controller="Product" asp-action="Upsert" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Create New Product</a>
+        </div>
+
+    </div>
+</div><br />
+
+
+<table class="table table-border table-striped " id="myTable">
+<thead>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>ISBN</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>CopyType</th>
+        <th>Price</th>
+        
+        
+        <th>Action</th>
+    </tr>
+</thead>
+
+
+</table>
+@section Scripts{
+    <script src="~/js/Product.js"></script>
+}

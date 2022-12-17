@@ -1,0 +1,27 @@
+﻿@model CopyType
+<form method="post" asp-action="DeletePOST">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-1">
+            <h2 class="text-primary">Delete Copy-Type</h2>
+        </div>
+        <hr />
+        @*<div asp-validation-summary="All"></div>*@
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" disabled class="form-control" />
+            
+           
+        </div> 
+
+        <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+        <a class="btn btn-secondary" asp-controller="CopyType" asp-action="Index" style="width:150px">Back To List</a>
+    </div>
+
+
+</form>
+@section scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}

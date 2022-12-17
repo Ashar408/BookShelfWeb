@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BookShelf.Utility
+{
+    public static class SD
+    {
+        public const string Role_User_Ind = "Individual";
+        public const string Role_User_Com = "Company";
+        public const string Role_Admin = "Admin";
+        public const string Role_Employee = "Employee";
+
+        public const string StatusPending = "Pending";
+        public const string StatusApproved = "Approved";
+        public const string StatusInProcessing = "Processing";
+        public const string StatusShipped = "Shipped";
+        public const string StatusCancelled = "Cancelled";
+        public const string StatusRefund = "Refund";
+
+
+        public const string PaymentStatusPending = "Pending";
+        public const string PaymentStatusApproved = "Approved";
+        public const string PaymentStatusDelayedPayment = "ApprovedForDelayedPayment";
+        public const string PaymentStatusRejected = "Rejected";
+
+
+        public const string SessionCart = "SessionShoppingCart";
+    }
+
+}
